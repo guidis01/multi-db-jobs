@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
+
+    protected $connection = 'midwestemo';
+
+    protected $guarded = [];
+
+    protected $casts = [
+        'metadata' => 'array'
+    ];
 }
